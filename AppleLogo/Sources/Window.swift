@@ -38,9 +38,10 @@ public class Window: UIWindow {
 		}
 	}
 	
-	private func stopTexturePlayer(_ firstResponders: [UIView]) {
-		(firstResponders.first?.superview as? AppleLogoView)?.updateTexturePlayer?(false)
-	}
+    private func stopTexturePlayer(_ firstResponders: [UIView]) {
+        (firstResponders.first as? AppleLogoView)?.updateTexturePlayer?(false)
+        (firstResponders.first?.superview as? AppleLogoView)?.updateTexturePlayer?(false)
+    }
 	
 	private func childHitTest(point: CGPoint, with event: UIEvent?) -> [UIView]? {
 		
